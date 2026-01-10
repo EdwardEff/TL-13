@@ -56,6 +56,7 @@ test.describe('User management API', () => {
         UserDTO.checkServerResponse(deleteUserJson);
     });
 
+
     test('delete user: should return 404 if user not found', async ({ request }) => {
         await prepareEnv(request);
         const deleteUserResponse = await request.delete(`${baseURLWithEndpoint}/200`);
